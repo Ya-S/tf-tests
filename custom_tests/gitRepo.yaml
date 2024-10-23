@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
   name: test-secret
-  namespace: ys-helloworld
+  namespace: flux-system
 spec:
   interval: 30s
   url: https://github.com/Ya-S/tf-tests

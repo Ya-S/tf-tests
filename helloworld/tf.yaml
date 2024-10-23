@@ -2,7 +2,7 @@ apiVersion: infra.contrib.fluxcd.io/v1alpha2
 kind: Terraform
 metadata:
   name: helloworld
-  namespace: ys-helloworld
+  namespace: flux-system
 spec:
   interval: 1m
   approvePlan: auto
@@ -10,4 +10,4 @@ spec:
   sourceRef:
     kind: GitRepository
     name: helloworld
-    namespace: ys-helloworld
+    namespace: flux-system
