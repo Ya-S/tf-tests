@@ -15,11 +15,11 @@ resource "random_password" "password" {
 resource "kubernetes_secret" "example" {
   metadata {
     name      = "basic-auth"
-    namespace = "var.namespace"
+    namespace = var.namespace
   }
 
   data = {
-    username = "var.username"
+    username = var.username
     password = resource.random_password.password.result
   }
 
